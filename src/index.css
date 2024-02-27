@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@700&family=Playpen+Sans&family=Quicksand:wght@500&family=Ubuntu&display=swap');
+
+* {
+  font-family: 'Lisu Bosa', serif;
+  font-family: 'Playpen Sans', cursive;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+.navbar {
+  background-color: rgb(107, 205, 196);
+}
+.navbar-brand{
+  font-size: 30px;
+}
+.navbar-nav{
+  margin-left: 40px;
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+/* search nav */
+
+
+.box {
+  background-color: rgb(237, 172, 146);
+  border-radius: 20px;
+  height: 300px;
+  padding: 4%;
+
+}
+
+.box form {
+  width: 50%;
+  /* border: 2px solid yellow */
+}
+
+.box form input:hover {
+  letter-spacing: 1px;
+  border: 2px solid rgb(230, 188, 195);
+  border-radius: 10px;
+  border-radius: 10px;
+}
+
+.box form button:hover {
+  letter-spacing: 1px;
+  border: 2px solid rgb(70, 98, 64);
+  border-radius: 10px;
+}
+
+
+
+
+.icon-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* padding: 3%; */
+  color: white;
+  border: none;
+}
+
+
+
+.form-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  width: 8em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  /* box-shadow: 6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff; */
+}
+
+.button::before {
+  content: '';
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #120fd8 0%, #912881 50%, #139fd0 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.button:hover::before {
+  width: 9em;
+}
+
+.cloud {
+  color: gray;
+}
+
+/* weather */
+.weather-container {
+
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  width: fit-content;
+  background-color: black;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-weather {
+  position: relative;
+  width: 450px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-radius: 30px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(65, 65, 65, 0.308);
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  cursor: pointer;
+}
+
+.city {
+  font-weight: 700;
+  font-size: 2.0em;
+  letter-spacing: 1.2px;
+  color: white;
+}
+
+.weather {
+  font-weight: 500;
+  font-size: 0.7em;
+  letter-spacing: 1.2px;
+  color: rgb(197, 197, 197);
+}
+
+.temp {
+  font-size: 1.8em;
+  color: white;
+}
+
+.minmaxContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.min,
+.max {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0px 20px;
+  gap: 4px;
+}
+
+.max {
+  align-items: flex-start;
+  border-left: 2px solid white;
+}
+
+.maxHeading,
+.minHeading {
+  font-size: 0.7em;
+  font-weight: 600;
+  color: white;
+}
+
+.maxTemp,
+.minTemp {
+  font-size: 0.6em;
+  font-weight: 500;
+  color: rgb(197, 197, 197);
+}
+
+.cardContainer::before {
+  width: 100px;
+  height: 100px;
+  content: "";
+  position: absolute;
+  background-color: rgb(144, 161, 255);
+  z-index: -1;
+  border-radius: 50%;
+  left: 100px;
+  top: 50px;
+  transition: all 1s;
+}
+
+.cardContainer:hover::before {
+  transform: translate(-50px, 50px);
+}
+
+/* input */
+.input {
+  background-color: #212121;
+  max-width: 190px;
+  height: 40px;
+  padding: 10px;
+  /* text-align: center; */
+  border: 2px solid white;
+  border-radius: 5px;
+  /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+}
+
+.input:focus {
+  color: rgb(0, 255, 255);
+  background-color: #212121;
+  outline-color: rgb(0, 255, 255);
+  box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  transition: .1s;
+  transition-property: box-shadow;
+}
+
+@media(max-width :768px) {}
